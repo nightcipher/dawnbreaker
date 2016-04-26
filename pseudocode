@@ -1,0 +1,78 @@
+GAME
+
+Player
+Character Creation
+Name
+Gender
+Race
+Class
+Class Stats
+Class Abilities
+Player Combat
+Attack
+Defend
+Run
+Special
+Map
+Map Creation
+
+Map Movement
+Items
+Equipment
+Loot
+Weapons
+Enemies
+Enemy Combat
+Enemy Stats
+Stats
+Abilities
+
+
+PLAYER CLASSES
+
+HP
+Range: 10-20 (player), 5-30 (enemy)
+	Based on player class
+	Randomly chosen in a range for enemy
+When HP is 0, the entity is dead.
+
+DAMAGE
+Range: 5-10 (player), 3-15 (enemy)
+	Based on player class
+	Randomly chosen in a range for enemy
+Determines damage dealt from basic attacks
+
+DEXTERITY
+Range: 1-10 (both)
+	Based on player class
+	Set by enemy type with a small random modifier
+AGILITY
+Range: 1-10 (both)
+	Based on player class
+	Set by enemy type with a small random modifier
+RACIAL ABILITY
+	Angel
+		(Passive) Radiance: Enemy takes damage each round
+	Asimar
+		(Passive) Rejuvenation: Restores HP every 3 rounds
+		
+	Blessed Human
+		(Passive) Rancor: Critical Strikes and Counterattacks deal double damage
+
+CLASS ABILITY
+	Ember Monk
+		Raging Strikes: Makes 3-5 strikes at a reduced damage on each hit
+		Radiant Flames: Enemy takes instant damage, then damage over time
+	Solar Knight
+		Blinding Flash: Enemy has increased chance to miss for X rounds
+Blessing: Reduces damage taken for next several rounds
+Aurora Warden
+	Deliverance: Double attack, Less to hit
+		Divine Smite: Stuns enemy for 1 round, enemy cannot dodge
+
+COMBAT
+	Attacker rolls DEX, Defender rolls AGI. If Attacker rolls higher, attack lands. If Defender rolls higher, attack misses. Rolling a DEX 10 results in double damage, rolling an AGI 10 results in a counter-attack. Ties go to the defender.
+
+SUGGESTED FEATURES
+
+Msvcrt module for python
