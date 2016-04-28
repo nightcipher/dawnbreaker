@@ -37,7 +37,7 @@ Range: 10-20 (player), 5-30 (enemy)
 When HP is 0, the entity is dead.
 
 DAMAGE
-Range: 5-10 (player), 3-15 (enemy)
+Range: 5-10 (player), 3-7 (enemy)
 	Based on player class
 	Randomly chosen in a range for enemy
 Determines damage dealt from basic attacks
