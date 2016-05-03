@@ -5,10 +5,16 @@
 import random
 import pickle
 
-menus = open('menus.bin','rb')
-raceMenu = pickle.load(menus)
-classMenu = pickle.load(menus)
-menus.close()
+textBlocks = open('TextBlocks.bin','rb')
+raceMenu = pickle.load(textBlocks)
+angelDesc = pickle.load(textBlocks)
+aasimarDesc = pickle.load(textBlocks)
+exaltedDesc = pickle.load(textBlocks)
+classMenu = pickle.load(textBlocks)
+knightDesc = pickle.load(textBlocks)
+monkDesc = pickle.load(textBlocks)
+wardenDesc = pickle.load(textBlocks)
+textBlocks.close()
 
 class Player(object):
     def __init__(self, name, gender, race, playerClass, hp = 1, dam = 0, dex = 0, agi = 0):
@@ -103,16 +109,25 @@ def createChar():
         choice = int(input("What race are you? [1,2,3]"))
         if choice == 1:
             #Angel
-            charRace = "Angel"
-            finished = True
+            print(angelDesc)
+            confirm = input("You are an Angel? [Y/N]")
+            if confirm.lower() == "y":
+                charRace = "Angel"
+                finished = True
         elif choice == 2:
             #Aasimar
-            charRace = "Aasimar"
-            finished = True
+            print(aasimarDesc)
+            confirm = input("You are an Aasimar? [Y/N]")
+            if confirm.lower() == "y":
+                charRace = "Aasimar"
+                finished = True
         elif choice == 3:
-            #Blessed Mortal
-            charRace = "Exalted Mortal"
-            finished =  True
+            #Exalted Mortal
+            print(exaltedDesc)
+            confirm = input("You are an Exalted Mortal? [Y/N]")
+            if confirm.lower() == "y":
+                charRace = "Exalted Mortal"
+                finished =  True
         else:
             print("You can't choose that! Try again.")
     finished = False
@@ -123,6 +138,7 @@ def createChar():
         choice = int(input("What were you trained as? [1,2,3]"))
         if choice == 1:
             #Solar Knight
+            print(knightDesc)
             confirm = input("So you are a Solar Knight? [Y/N]")
             if confirm.lower() == "y":                
                 charClass = "Solar Knight"
@@ -131,6 +147,7 @@ def createChar():
                 print("Let's try this again.")
         elif choice == 2:
             #Ember Monk
+            print(monkDesc)
             confirm = input("So you are an Ember Monk? [Y/N]")
             if confirm.lower() == "y":                
                 charClass = "Ember Monk"
@@ -139,6 +156,7 @@ def createChar():
                 print("Let's try this again.")
         elif choice == 3:
             #Aurora Warden
+            print(wardenDesc)
             confirm = input("So you are an Aurora Warden? [Y/N]")
             if confirm.lower() == "y":                
                 charClass = "Aurora Warden"
@@ -187,7 +205,7 @@ def createChar():
                 print("Let's try this again.")
         else:
             print("You can't choose that! Try again.")
-    print("You've finished telling me about yourself. You are " + charName + ", the " + charGender + " " + charRace + " " + charClass + ".")
+    print("You've finished telling me about yourself. \nYou are " + charName + ", the " + charGender + " " + charRace + " " + charClass + ".")
     confirm = input("Is all that correct? if it isn't, we have to start all over. [Y/N]")
     if confirm.lower() == "y":                
         if charClass == "Solar Knight":
