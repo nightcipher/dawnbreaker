@@ -65,9 +65,9 @@ CLASS ABILITY
 		Radiant Flames: Enemy takes instant damage, then damage over time
 	Solar Knight
 		Blinding Flash: Enemy has increased chance to miss for X rounds
-Blessing: Reduces damage taken for next several rounds
-Aurora Warden
-	Deliverance: Double attack, Less to hit
+		Blessing: Reduces damage taken for next several rounds
+	Aurora Warden
+		Deliverance: Double attack, Less to hit
 		Divine Smite: Stuns enemy for 1 round, enemy cannot dodge
 
 COMBAT
