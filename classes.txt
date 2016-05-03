@@ -1,0 +1,9 @@
+$EmberMonk
+Raging Strikes: Makes 3-5 weaker strikes at target enemy.
+Radiant Flames: Burns the enemy, dealing immediate damage and damage over the next few rounds.
+$SolarKnight
+Blinding Flash: Enemy has increased chance to miss for the next few rounds.
+Blessing: Reduces damage taken for the next few rounds.
+$AuroraWarden
+Deliverance: Powerful attack that deals double damage, but is more likely to miss.
+Divine Smite: Stuns the enemy for one round.
