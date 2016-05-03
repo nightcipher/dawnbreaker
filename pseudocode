@@ -1,13 +1,13 @@
 GAME
 
 Player
-Character Creation
-Name
-Gender
-Race
-Class
-Class Stats
-Class Abilities
+Character Creation [DONE]
+	Name [DONE]
+	Gender
+	Race [FILE MADE, CODING NEEDED]
+	Class
+	Class Stats
+	Class Abilities [FILE MADE, CODING NEEDED]
 Player Combat
 Attack
 Defend
