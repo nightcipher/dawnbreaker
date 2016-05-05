@@ -73,7 +73,7 @@ monkDesc = '''
 A monk who worships the sacred flames of Sol.
 They fight with speed and dexterity, rather than raw strength. 
 Raging Strikes: Makes 3-5 weaker strikes at target enemy.
-Radiant Flames: Burns the enemy, dealing immediate damage and damage over the next few rounds.
+Radiant Flames: Deas immediate damage and damage over the next few rounds.
 '''
 wardenDesc = '''
 A warden of Sol. They are driven to protect the innocent,
