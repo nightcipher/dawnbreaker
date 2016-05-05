@@ -30,9 +30,14 @@ class Map(object):
 
     def tileCheck(self, x, y):
         badTerrain = ('~', '#')
-        if self.grid[x][y] in badTerrain:
+        if x == self.size or y == self.size:
+            print("Out of bounds!")
             return False
-        elif x == self.size or y == self.size:
+        elif x < 0 or y < 0:
+            print("Out of bounds!")
+            return False
+        elif self.grid[x][y] in badTerrain:
+            print("You can't go that way!")
             return False
         else:
             return True
@@ -65,17 +70,4 @@ class Map(object):
                 self.grid[self.charX][self.charY] = "-"
                 self.charX -= 1
                 self.grid[self.charX][self.charY] = "X"
-testMap = Map()
-print(testMap)
 
-testMap.move("south")
-print(testMap)
-    
-testMap.move("north")
-print(testMap)
-
-testMap.move("east")
-print(testMap)
-
-testMap.move("west")
-print(testMap)

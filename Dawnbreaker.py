@@ -121,11 +121,16 @@ class Map(object):
             result += "\n"
         return result
 
-        def tileCheck(self, x, y):
+    def tileCheck(self, x, y):
         badTerrain = ('~', '#')
-        if self.grid[x][y] in badTerrain:
+        if x == self.size or y == self.size:
+            print("Out of bounds!")
             return False
-        elif x == self.size or y == self.size:
+        elif x < 0 or y < 0:
+            print("Out of bounds!")
+            return False
+        elif self.grid[x][y] in badTerrain:
+            print("You can't go that way!")
             return False
         else:
             return True
@@ -136,6 +141,9 @@ class Map(object):
             self.grid[x][y] = newTerrain
         else:
             print("Error! That's not valid terrain.")
+        #TODO: Use this function to generate actual terrain on map
+        #TODO: Write function for an enemy-occupied tile with a hidden identity
+        #Hidden identity = tile that looks normal on map
 
     def move(self, direction):
         if direction == "west":
