@@ -81,6 +81,17 @@ and specialize in mitigating damage taken.
 Blinding Flash: Enemy has increased chance to miss for the next few rounds.
 Blessing: Reduces damage taken for the next few rounds.
 '''
+actionMenu = '''
+|=========================|
+|=====Time to  Fight======|
+|1) Attack                |
+|2) Special 1             |
+|3) Special 2             |
+|4) Flee                  |
+|=========================|
+|=========================|
+Enter a number.
+'''
 import pickle
 theFile = open('TextBlocks.bin','wb')
 pickle.dump(raceMenu, theFile)
@@ -91,4 +102,5 @@ pickle.dump(classMenu, theFile)
 pickle.dump(knightDesc, theFile)
 pickle.dump(monkDesc, theFile)
 pickle.dump(wardenDesc, theFile)
+pickle.dump(actionMenu, theFile)
 theFile.close()

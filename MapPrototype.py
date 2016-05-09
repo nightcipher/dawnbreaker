@@ -1,6 +1,3 @@
-#Map Prototype
-#Nate Stonecipher
-
 class Map(object):
 
     def __init__(self, size = 5, charX = 0, charY = 0):
@@ -17,8 +14,7 @@ class Map(object):
             for y in range(size):
                 x.append("-")
                 #placeholder until tile objects are used
-
-        self.grid[charX][charY] = "X"
+        self.grid[charX][charY] = 'X'
 
     def __str__(self):
         result = ""
@@ -43,31 +39,60 @@ class Map(object):
             return True
 
     def setTerrain(self, x, y, newTerrain):
-        TERRAIN = ('-','~','#','!')
+        TERRAIN = ('-','~','#','!','@')
         if newTerrain in TERRAIN:
             self.grid[x][y] = newTerrain
         else:
             print("Error! That's not valid terrain.")
+        #TODO: Use this function to generate actual terrain on map
+        #TODO: Write function for an enemy-occupied tile with a hidden identity
+        #Hidden identity = tile that looks normal on map
+
+    def hideEnemies(self):
+        hiddenMap = self.grid
+        for n in hiddenMap:
+            if n == '~':
+                n = '-'
+        result = ""
+        for x in range(self.size):
+            for y in range(self.size):
+                tile = hiddenMap[x][y]
+                if tile == '~':
+                    tile = '-'
+                    result += tile
+                else:
+                    result += tile
+            result += "\n"
+        return result
 
     def move(self, direction):
-        if direction == "west":
+        if direction == 4:
+            #Move West
             if self.tileCheck(self.charX, self.charY - 1):
                 self.grid[self.charX][self.charY] = "-"
                 self.charY -= 1
                 self.grid[self.charX][self.charY] = "X"
-        if direction == "east":
+        elif direction == 3:
+            #Move East
             if self.tileCheck(self.charX, self.charY + 1):
                 self.grid[self.charX][self.charY] = "-"
                 self.charY += 1
                 self.grid[self.charX][self.charY] = "X"
-        if direction == "south":
+        elif direction == 2:
+            #Move South
             if self.tileCheck(self.charX + 1, self.charY):
                 self.grid[self.charX][self.charY] = "-"
                 self.charX += 1
                 self.grid[self.charX][self.charY] = "X"
-        if direction == "north":
+        elif direction == 1:
+            #Move North
             if self.tileCheck(self.charX - 1, self.charY):
                 self.grid[self.charX][self.charY] = "-"
                 self.charX -= 1
                 self.grid[self.charX][self.charY] = "X"
-
+        else:
+            print("You didn't give me a cardinal direction!")
+theMap = Map()
+print(theMap)
+theMap.move(2)
+print(theMap)
