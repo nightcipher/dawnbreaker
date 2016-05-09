@@ -22,6 +22,30 @@ Equipment
 Loot
 Weapons
 Enemies
+	Lesser Fiend
+	Low HP
+	Med STR
+	Med DEX
+	Low AGI
+	
+	Fiend Lord [Boss]
+	High HP
+	High STR
+	Med DEX
+	Low AGI
+	
+	Screeching Devil
+	Low HP
+	Low STR
+	High DEX
+	Low AGI
+	
+	Hellbat
+	Low HP
+	High STR
+	High DEX
+	Med AGI
+	
 Enemy Combat
 Enemy Stats
 Stats
