@@ -93,6 +93,24 @@ actionMenu = '''
 |=========================|
 Enter a number.
 '''
+story = '''
+The world is in grave danger. Demons under the command
+of Rordran Vell, the Dawnbreaker, have invaded and now
+threaten all mortals. They seek to complete an ancient,
+powerful ritual at the Temple of Sol to destroy the
+sun forever, casting the world in to eternal darkness.
+
+You are the chosen warrior of the Solar Order, sworn
+enemies of the demons. The rest of the order are
+defending the major cities, preventing the demons from
+slaughtering the innocent while you end the battle,
+once and for all.
+'''
+title = '''
+╔╦╗┌─┐┬ ┬┌┐┌┌┐ ┬─┐┌─┐┌─┐┬┌─┌─┐┬─┐
+ ║║├─┤││││││├┴┐├┬┘├┤ ├─┤├┴┐├┤ ├┬┘
+═╩╝┴ ┴└┴┘┘└┘└─┘┴└─└─┘┴ ┴┴ ┴└─┘┴└─
+'''
 import pickle
 theFile = open('TextBlocks.bin','wb')
 pickle.dump(raceMenu, theFile)
@@ -104,4 +122,6 @@ pickle.dump(knightDesc, theFile)
 pickle.dump(monkDesc, theFile)
 pickle.dump(wardenDesc, theFile)
 pickle.dump(actionMenu, theFile)
+pickle.dump(story, theFile)
+pickle.dump(title, theFile)
 theFile.close()

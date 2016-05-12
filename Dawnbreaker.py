@@ -16,6 +16,8 @@ knightDesc = pickle.load(textBlocks)
 monkDesc = pickle.load(textBlocks)
 wardenDesc = pickle.load(textBlocks)
 actionMenu = pickle.load(textBlocks)
+story = pickle.load(textBlocks)
+title = pickle.load(textBlocks)
 textBlocks.close()
 
 class Entity(object):
@@ -747,6 +749,8 @@ def gameEnd():
     sys.exit(0)
         
 def main():
+    print(title)
+    print(story)
     gameOn = True
     global gameMap
     gameMap = Map()
