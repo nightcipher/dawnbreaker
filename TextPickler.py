@@ -21,7 +21,7 @@ An angel of the Solar Order who helps guard mortals from demons.
 Angels are all shrouded in radiant light,
 burning dark creatures unfortunate enough to be near.
 Passive: Radiance - Deals damage each turn to enemies.
-HP: 15
+HP: 25
 Strength: 7
 Agility: 10
 Dexterity: 5
@@ -30,8 +30,8 @@ aasimarDesc = '''
 A direct descendent of the union between an angel and a mortal.
 The divine blood in them heals their wounds very swiftly,
 even though it is not as pure as an angel's.
-Passive: Rejuvenation - Restores HP every few turns.
-HP: 20
+Passive: Rejuvenation - Restores HP every turn.
+HP: 30
 Strength: 6
 Agility: 5
 Dexterity: 8
@@ -42,7 +42,7 @@ They fight with strength beyond what average mortals are capable of,
 hitting harder and faster than even some angelic warriors.
 Demons fear them for their combat strength.
 Passive: Rancor - Critical hits and Counterstrikes deal double damage. 
-HP: 10
+HP: 20
 Strength: 6
 Agility: 7
 Dexterity: 10
@@ -88,6 +88,7 @@ actionMenu = '''
 |2) Special 1             |
 |3) Special 2             |
 |4) Flee                  |
+|5) Class Description     |
 |=========================|
 |=========================|
 Enter a number.
